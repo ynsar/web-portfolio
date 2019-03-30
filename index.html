@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang='' xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!--Foundation-->
+   <link rel="stylesheet" href="css/normalize.css"/>
+   <link rel="stylesheet" href="css/foundation.css"/>
+
+   <!-- Navigation Bar -->
+   <link rel="stylesheet" href="css/navrespons.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/sticky.css"/>
+
+    <!-- Gallery -->
+    <link rel="stylesheet" href="css/component.css"/>
+    <script src="js/gallery/modernizr.custom.js"></script>
+
+    <!-- Navigation Sticky -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+
+            // grab the initial top offset of the navigation
+            var sticky_navigation_offset_top = $('.sticky').offset().top;
+            // our function that decides weather the navigation bar should have "fixed" css position or not.
+            var sticky_navigation = function(){
+                var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+
+                // if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+                if (scroll_top > sticky_navigation_offset_top) {
+                    $('.sticky').css({ 'position': 'fixed', 'marginLeft':'auto', 'marginRight':'auto', 'backgroundColor': 'white' });
+                } else {
+                    $('.sticky').css({ 'position': 'relative', 'backgroundColor': 'transparent' });
+                }
+            };
+
+            // run our function on load
+            sticky_navigation();
+
+            // and run it again every time you scroll
+            $(window).scroll(function() {
+                sticky_navigation();
+            });
+
+            // NOT required:
+            // for this demo disable all links that point to "#"
+            $('a[href="#"]').click(function(event){
+                event.preventDefault();
+            });
+
+        });
+    </script>
+
+   <!-- Font -->
+   <link rel="stylesheet" href="css/roboto-font.css"/>
+
+    <link rel="stylesheet" href="css/style.css"/>
+   <title>ynsar</title>
+</head>
+<body>
+
+<section class="sec1">
+    <div class="identity" >
+        <img src="images/peachbg.jpg">
+        <!--<video autoplay loop poster="polina.jpg" id="bgvid">-->
+            <source src="polina.webm" type="video/webm">
+            <source src="video2.MP4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+      <header class="navigation row">
+         <div class="sticky">
+            <div class="large-12 column">
+               <div id='cssmenu'>
+                  <ul>
+                     <li><a href='#welcome'>HOME</a></li>
+                     <li><a href='#about'>ABOUT</a>
+                     </li>
+                     <li><a href='#portfolio'>PORTFOLIO</a></li>
+                     <li><a href='#contact'>CONTACT</a></li>
+                     <li class=""></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <div class="row">
+         <section id="welcome">
+            <div class="large-12 column">
+                <div class="peachLogo show-for-medium-up">
+                    <h1 class="peachTitle">PEACHES DAY</h1>
+                </div>
+                <div class="peachLogoSmall show-for-small-only">
+                    <h1 class="peachSmall">PEACHES DAY</h1>
+                </div>
+            </div>
+         </section>
+      </div>
+
+      <section id="about">
+        <div class="row">
+            <div class="large-12 column">
+                <h3>
+                    <div class="peachName">
+                        PEACHES DAY
+                    </div>
+                </h3>
+                <p>Peaches day is the project to storage my artworks and my journey. <br>Every pieces of work I was done by myself since I was collage student.<br> I hope my works will be impression for visitor.</p>
+                <p>The orgin of the name "PEACHES DAY" come from my most favorite fruit that looks lively, sweet, and lovely.<br> Its unique color was fascinating and inspired me.</p>
+                </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+          <div class="row">
+              <div class="large-12 column">
+                  <h3>
+                      <div class="peachName">
+                          <img style="width: 4%" src="images/peach1600.png" alt=""/>
+                          PORTFOLIO
+
+                      </div>
+                  </h3>
+
+                  <!--<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">-->
+                      <!--<li><a href="#">-->
+                          <!--<img class="thumbPort" src="images/port1.jpg" alt=""/>-->
+                          <!--<h3 class="thumbPort_topic">Poster Project</h3>-->
+                          <!--<p class="thumbPort_detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet necessitatibus nostrum pariatur soluta unde.</p>-->
+                          <!--</a>-->
+                      <!--</li>-->
+                      <!--<li><a href="#">-->
+                          <!--<img class="tumbPort" src="images/port2.jpg" alt=""/>-->
+                          <!--<h3 class="thumbPort_topic">Poster Project</h3>-->
+                          <!--<p class="thumbPort_detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet necessitatibus nostrum pariatur soluta unde.</p>-->
+                      <!--</a>-->
+                      <!--</li>-->
+                      <!--<li><a href="#">-->
+                          <!--<img class="tumbPort" src="images/port3.jpg" alt=""/>-->
+                          <!--<h3 class="thumbPort_topic">Poster Project</h3>-->
+                          <!--<p class="thumbPort_detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet necessitatibus nostrum pariatur soluta unde.</p>-->
+                      <!--</a>-->
+                      <!--</li>-->
+                  <!--</ul>-->
+
+                  <ul id="og-grid" class="og-grid">
+                      <li>
+                          <a href="" data-largesrc="images/port1_b.jpg" data-title="Mondialito"
+                             data-description="Modialito project is mock up album to represent personally and identity of Mondialio band.">
+                              <img src="images/port1.jpg" alt="img01"/>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="" data-largesrc="images/port2_b.jpg" data-title="12 Times"
+                             data-description="World clock which present time zone of Thailand and opposite country that many different.">
+                              <img src="images/port2.jpg" alt="img02"/>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="" data-largesrc="images/port3_b.jpg" data-title="Beauty Double Egeded Sword"
+                             data-description="Woman Poster that brought illustration and drawing on the work.">
+                              <img src="images/port3.jpg" alt="img03"/>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="" data-largesrc="images/port4_b.jpg" data-title="Handmade Alphabet"
+                             data-description="Typography creating which made from thread become font.">
+                              <img src="images/port4.jpg" alt="img04"/>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="" data-largesrc="images/port5_b.jpg" data-title="Information Interactive"
+                             data-description="Information Design of Kenya Hara Portfolio, Got theme inspiration from his style designing.">
+                              <img src="images/port5.jpg" alt="img05"/>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="" data-largesrc="images/port6_b.jpg" data-title="Drawing to Illustration"
+                             data-description="Sketching by hand and modified on Photoshop.">
+                              <img src="images/port6.jpg" alt="img04"/>
+                          </a>
+                      </li>
+                  </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="contact">
+          <form>
+              <div class="row">
+                  <label class="large-8 column large-centered">Contact</label>
+                  <p class="large-8 column medium-centered">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad atque cupiditate distinctio, dolore ea eius eligendi explicabo facilis fugit harum, in laborum necessitatibus quae quisquam rerum sapiente sit ut.</p>
+                  <div class="large-8 column large-centered">
+                      <input class="large-12 column" type="text" placeholder="NAME"/>
+                      <input class="large-12 column" type="text" placeholder="E-MAIL"/>
+                      <textarea class="large-12 column" placeholder="Messege here"/></textarea>
+                      <a href="#" class="button expand radius right">Send</a>
+                  </div>
+              </div>
+          </form>
+      </section>
+
+      <section id="footer">
+          <div class="row">
+              <div class="large-12 column text-center">
+                  <ul class="social-icon no-bullet">
+                      <li><a href="#">
+                          <img src="images/twitter-icon.png" alt=""/>
+                      </a></li>
+                      <li><a href="#">
+                          <img src="images/facebook-icon.png" alt=""/>
+                      </a></li>
+                  </ul>
+              </div>
+              <div class="large-12 column text-center">
+                  © 2014 Sittirungrueangsin Yanisa All Rights Reserved
+              </div>
+          </div>
+      </section>
+</body>
+    <script src="js/vendor/jquery.js"></script>
+    <!-- Other JS plugins can be included here -->
+
+    <script>
+       $(document).foundation();
+    </script>
+
+    <!--[if lt IE 9]>
+    <script>
+        document.createElement('video');
+    </script>
+    <![endif]-->
+
+    <!-- Smooth Scroll -->
+<script>
+    $(function(){
+        var target, scroll;
+
+        $("a[href*=#]:not([href=#])").on("click", function(e) {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                target = $(this.hash);
+                target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+
+                if (target.length) {
+                    if (typeof document.body.style.transitionProperty === 'string') {
+                        e.preventDefault();
+
+                        var avail = $(document).height() - $(window).height();
+
+                        scroll = target.offset().top;
+
+                        if (scroll > avail) {
+                            scroll = avail;
+                        }
+
+                        $("html").css({
+                            "margin-top" : ( $(window).scrollTop() - scroll ) + "px",
+                            "transition" : "0.8s ease-in-out"
+                        }).data("transitioning", true);
+                    } else {
+                        $("html, body").animate({
+                            scrollTop: scroll
+                        }, 1000);
+                        return;
+                    }
+                }
+            }
+        });
+
+        $("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function (e) {
+            if (e.target == e.currentTarget && $(this).data("transitioning") === true) {
+                $(this).removeAttr("style").data("transitioning", false);
+                $("html, body").scrollTop(scroll);
+                return;
+            }
+        });
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/gallery/grid.js"></script>
+    <script>
+        $(function() {
+            Grid.init();
+        });
+    </script>
+<html>
